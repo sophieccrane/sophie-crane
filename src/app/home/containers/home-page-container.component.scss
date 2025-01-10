@@ -1,0 +1,15 @@
+.home-page {
+  @apply flex flex-col;
+}
+
+.nav-bar {
+  @apply flex justify-end;
+}
+
+.title-section {
+  @apply flex flex-row;
+}
+
+.introduction {
+  @apply flex flex-col;
+}
