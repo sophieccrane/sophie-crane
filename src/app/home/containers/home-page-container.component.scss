@@ -1,15 +1,19 @@
-.home-page {
-  @apply flex flex-col;
+.home {
+  @apply relative isolate px-6 pt-14 lg:px-8;
+
+  &-introduction-section {
+    @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex;
+  }
 }
 
-.nav-bar {
-  @apply flex justify-end;
-}
+.introduction-section {
+  @apply flex flex-col text-left ml-4 self-center;
 
-.title-section {
-  @apply flex flex-row;
-}
+  &-title {
+    @apply text-5xl font-semibold text-white sm:text-7xl;
+  }
 
-.introduction {
-  @apply flex flex-col;
+  &-about {
+    @apply text-lg indent-1 mt-4 font-medium text-white sm:text-xl/8;
+  }
 }

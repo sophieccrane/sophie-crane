@@ -1,3 +1,15 @@
-.nav-bar-buttons {
-  @apply space-x-4 m-4;
+.nav-bar {
+  @apply absolute inset-x-0 top-0 z-50;
+
+  &-menu {
+    @apply flex items-end justify-end p-6 lg:px-8;
+  }
+
+  &-button-row {
+    @apply hidden lg:flex lg:gap-x-12;
+  }
+
+  &-button {
+    @apply text-sm/6 font-semibold text-white hover:text-[#FF9889];
+  }
 }

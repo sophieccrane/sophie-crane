@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['"Monaco"', ...defaultTheme.fontFamily.sans],
+        'sans': ['ui-monospace', ...defaultTheme.fontFamily.sans],
       },
     },
   },
