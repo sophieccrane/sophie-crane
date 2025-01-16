@@ -1,5 +1,5 @@
 .home-page {
-  @apply flex flex-col;
+  @apply flex flex-col h-full;
 }
 
 .nav-bar {
@@ -7,9 +7,10 @@
 }
 
 .title-section {
-  @apply flex flex-row;
+  @apply flex flex-row self-center justify-self-center;
 }
 
 .introduction {
   @apply flex flex-col;
 }
+

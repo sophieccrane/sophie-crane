@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { HomePageContainerComponent } from './containers/home-page-container.component';
 import {HomeRoutingModule} from "./home-routing.module";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -11,8 +11,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     HomePageContainerComponent,
     NavBarComponent
   ],
-  imports: [
-    CommonModule, HomeRoutingModule
-  ]
+    imports: [
+        CommonModule, HomeRoutingModule, NgOptimizedImage
+    ]
 })
 export class HomeModule { }
