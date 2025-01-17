@@ -1,9 +1,33 @@
 <header class="nav-bar">
   <nav class="nav-bar-menu" aria-label="Global">
+    <div class="nav-bar-home-button">
+      <button routerLink="/" fragment="Home" class="nav-bar-button" (click)="sendFragment('Home')">Home</button>
+    </div>
     <div class="nav-bar-button-row">
-      <a href="#" class="nav-bar-button">Education</a>
-      <a href="#" class="nav-bar-button">Experience</a>
-      <a href="#" class="nav-bar-button">Interests</a>
+      <button routerLink="/" fragment="Education" class="nav-bar-button" (click)="sendFragment('Education')">Education</button>
+      <button routerLink="/" fragment="Experience" class="nav-bar-button" (click)="sendFragment('Experience')">Experience</button>
+      <button routerLink="/" fragment="Interests" class="nav-bar-button" (click)="sendFragment('Interests')">Interests</button>
     </div>
   </nav>
+  <div class="nav-bar-dropdown">
+    <div>
+      <button (click)="closeAndOpenMenu()" type="button" class="nav-bar-dropdown-button" id="menu-button" aria-expanded="true" aria-haspopup="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav-bar-dropdown-button-svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div *ngIf="!this.closed" class="nav-bar-dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+      <div class="py-1" role="none">
+        <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
+        <a routerLink="/" fragment="Education" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-0" (click)="sendFragment('Education')">Education</a>
+      </div>
+      <div class="py-1" role="none">
+        <a routerLink="/" fragment="Experience" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-1" (click)="sendFragment('Experience')">Experience</a>
+      </div>
+      <div class="py-1" role="none">
+        <a routerLink="/" fragment="Interests" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-2" (click)="sendFragment('Interests')">Interests</a>
+      </div>
+    </div>
+  </div>
 </header>

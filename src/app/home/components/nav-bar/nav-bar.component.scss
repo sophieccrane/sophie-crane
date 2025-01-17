@@ -1,15 +1,39 @@
 .nav-bar {
-  @apply absolute inset-x-0 top-0 z-50;
+  @apply sticky inset-x-0 top-0 z-50;
 
   &-menu {
-    @apply flex items-end justify-end p-6 lg:px-8;
+    @apply flex max-md:hidden p-6 lg:px-8 pt-4 justify-between;
+  }
+
+  &-home-button {
+    @apply justify-start;
   }
 
   &-button-row {
-    @apply hidden lg:flex lg:gap-x-12;
+    @apply flex gap-x-12 justify-end;
   }
 
   &-button {
     @apply text-sm/6 font-semibold text-white hover:text-[#FF9889];
+  }
+
+  &-dropdown {
+    @apply flex md:hidden justify-end p-4;
+
+    &-button {
+      @apply inline-flex justify-end px-3 py-2 text-sm/6 font-semibold text-white;
+
+      &-svg {
+        @apply size-6 stroke-white;
+      }
+    }
+
+    &-menu {
+      @apply absolute right-0 z-10 mt-10 mr-4 w-32 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 bg-[#FFC4D8] focus:outline-none divide-y divide-gray-100;
+
+      &-button {
+        @apply block px-4 py-2 text-sm/6 font-semibold text-white;
+      }
+    }
   }
 }
