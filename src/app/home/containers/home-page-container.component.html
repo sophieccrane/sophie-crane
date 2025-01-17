@@ -1,6 +1,6 @@
 <div class="page-container">
-  <app-nav-bar></app-nav-bar>
-  <div class="page" id="Home">
+  <app-nav-bar (clickEvent)="receiveFragment($event)"></app-nav-bar>
+  <section class="page" id="Home">
     <div class="page-section">
       <div>
         <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full">
@@ -10,24 +10,24 @@
         <p class="section-about">Software developer, runner, and hobby enthusiast.</p>
       </div>
     </div>
-  </div>
-  <div class="page" id="Education">
+  </section>
+  <section class="page" id="Education">
     <div class="section">
       <h1 class="section-title">Education</h1>
       <p class="section-about">University of South Carolina</p>
     </div>
-  </div>
+  </section>
 
-  <div class="page" id="Experience">
+  <section class="page" id="Experience">
     <div class="section">
       <h1 class="section-title">Experience</h1>
       <p class="section-about">Current Position: Associate Software Engineer</p>
     </div>
-  </div>
-  <div class="page" id="Interests">
+  </section>
+  <section class="page" id="Interests">
     <div class="section">
       <h1 class="section-title">Interests</h1>
       <p class="section-about">Running, crocheting, reading.</p>
     </div>
-  </div>
+  </section>
 </div>
