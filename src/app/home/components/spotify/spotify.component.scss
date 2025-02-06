@@ -1,0 +1,96 @@
+.profile {
+  @apply my-8 mx-4 flex items-start;
+
+  &-left {
+    @apply mr-4;
+  }
+
+  &-right {
+    @apply flex flex-col;
+  }
+
+  &-title {
+    @apply text-5xl text-left font-bold transition ease-in-out hover:-translate-y-1;
+  }
+
+  &-metadata-link {
+    @apply text-sm font-semibold hover:underline;
+  }
+
+  &-metadata-nolink {
+    @apply text-sm text-gray-50;
+  }
+}
+
+.music-section {
+
+  &-title {
+    @apply text-3xl font-bold pl-2 pt-2;
+  }
+}
+
+.track {
+  @apply p-4;
+
+  &-section {
+    @apply flex justify-between ring-2 ring-white rounded-md hover:ring-4 p-2 mb-2;
+  }
+
+  &-number {
+    @apply text-sm font-semibold self-center pl-1;
+  }
+
+  &-image {
+    @apply ml-2;
+  }
+
+  &-title {
+    @apply flex flex-col ml-2;
+
+    &-h1 {
+      @apply self-start;
+
+      &-text {
+        @apply text-lg font-semibold hover:underline;
+      }
+    }
+
+    &-h2 {
+      @apply self-start;
+
+      &-text {
+        @apply text-xs hover:underline;
+      }
+    }
+  }
+
+  &-album {
+    @apply self-center;
+
+    &-text {
+      @apply text-xs hover:underline;
+    }
+  }
+
+}
+
+.card {
+  @apply flex flex-col snap-center items-start justify-center h-[222px] w-[200px] p-4 ring-2 ring-white hover:ring-8 rounded-lg transition delay-75 duration-300 ease-in-out hover:-translate-y-1;
+
+  &-carousel {
+    @apply flex flex-row space-x-4 relative overflow-x-scroll snap-x;
+  }
+
+  &-section {
+    @apply p-4;
+
+    &-title {
+      @apply text-base text-left font-semibold max-w-[150px] truncate hover:underline hover:overflow-visible hover:text-wrap;
+    }
+
+    &-header {
+      @apply text-xs text-left capitalize;
+    }
+  }
+}
+

@@ -1,0 +1,72 @@
+<div class="page">
+  <div class="profile">
+    <div class="profile-left">
+      <a href="{{ userProfileDetails.external_urls.spotify }}">
+        <img src="{{ userProfileDetails.images[0].url }}" width="150" height="150" alt="spotify-profile-picture" class="profile-image">
+      </a>
+    </div>
+    <div class="profile-right">
+      <a href="{{ userProfileDetails.external_urls.spotify }}">
+        <h1 class="profile-title">{{ userProfileDetails.display_name }}</h1>
+      </a>
+      <div class="flex items-center">
+        <a href="{{ userProfileDetails.external_urls.spotify }}">
+          <p class="profile-metadata-link">@{{ userProfileDetails.id }}</p>
+        </a>
+        <span class="mx-0.5"> • </span>
+        <p class="profile-metadata-nolink">{{ userProfileDetails.followers.total }} Followers</p>
+      </div>
+    </div>
+  </div>
+  <div class="music-section">
+    <h1 class="music-section-title">Current Favorite Tracks</h1>
+    <div class="track">
+      <div *ngFor="let track of trackDetails; index as i">
+        <a href="{{ track.external_urls.spotify }}" class="track-section">
+          <div class="flex">
+            <div class="flex">
+              <h1 class="track-number">{{ i + 1 }}</h1>
+              <img src="{{ track.album.images[0].url }}" width="40" height="40" class="track-image">
+            </div>
+            <div class="track-title">
+              <a href="{{ track.external_urls.spotify }}" class="track-title-h1">
+                <h1 class="track-title-h1-text">{{ track.name }}</h1>
+              </a>
+              <a href="{{ track.artists[0].external_urls.spotify }}" class="track-title-h2">
+                <p class="track-title-h2-text">{{ track.artists[0].name }}</p>
+              </a>
+          </div>
+          </div>
+          <div class="track-album">
+            <a href="{{ track.album.external_urls.spotify }}">
+              <h1 class="track-album-text">{{ track.album.name }}</h1>
+            </a>
+          </div>
+        </a>
+      </div>
+    </div>
+    <h1 class="music-section-title">Favorite Artists</h1>
+    <div class="card-carousel">
+      <div *ngFor="let artist of artistDetails" class="card-section">
+        <a href="{{ artist.external_urls.spotify }}">
+          <div class="card">
+            <img src="{{ artist.images[0].url }}" width="150" height="150" class="card-section-image">
+            <h1 class="card-section-title">{{ artist.name }}</h1>
+            <h1 class="card-section-header">{{ artist.type }}</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+    <h1 class="music-section-title">Featured Playlists</h1>
+    <div class="card-carousel">
+      <div *ngFor="let playlist of playlistDetails" class="card-section">
+        <a href="{{ playlist.external_urls.spotify }}">
+          <div class="card">
+            <img src="{{ playlist.images[0].url }}" width="150" height="150" class="card-section-image">
+            <h1 class="card-section-title">{{ playlist.name }}</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
