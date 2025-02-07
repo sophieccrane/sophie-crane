@@ -1,0 +1,19 @@
+{
+  "educationPage": {
+    "title": "Education",
+    "collegeTitle": "University of South Carolina",
+    "collegeDuration": "From September 2019 to May 2023",
+    "collegeDescription": "Bachelor of Science in Computer Science with a Minor in Mathematics",
+    "collegeActivitiesTitle": "Extracurriculars",
+    "extracurriculars": [{
+      "href": "https://sc.edu/about/offices_and_divisions/student_success_center/study-smart/tutoring/index.php",
+      "description": "University of South Carolina Peer Tutoring (Calculus I, Calculus II, Introductory CS Classes)"
+    },{
+      "href": "https://www.pibetaphi.org/",
+      "description": "Pi Beta Phi Sorority"
+    },{
+      "href": "https://www.tbp.org/home.cfm",
+      "description": "Tau Beta Pi (Engineering Honors Society"
+    }]
+  }
+}

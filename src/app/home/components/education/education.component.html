@@ -1,0 +1,27 @@
+<div class="section">
+  <h1 class="section-title">{{ pageData.educationPage.title }}</h1>
+  <div class="body">
+    <div class="body-left">
+      <img src="./assets/southcarolina_1.jpg" height="300" width="300" class="body-left-image-left">
+      <img src="./assets/southcarolina_2.jpeg" height="300" width="300" class="body-left-image-right">
+      <img src="./assets/southcarolina_3.png" height="300" width="300" class="body-left-image-left">
+    </div>
+    <div class="body-right">
+      <div>
+        <h1 class="body-right-title"><a href="https://sc.edu/">{{ pageData.educationPage.collegeTitle }}</a></h1>
+        <h2 class="body-right-header">{{ pageData.educationPage.collegeDuration }}</h2>
+        <p class="body-right-body">{{ pageData.educationPage.collegeDescription }}</p>
+      </div>
+      <div>
+        <h2 class="body-right-header">{{ pageData.educationPage.collegeActivitiesTitle }}</h2>
+        <div *ngFor="let activity of pageData.educationPage.extracurriculars" class="ml-4">
+          <li class="body-right-item">
+            <a class="body-right-link" href="{{ activity.href }}">
+              {{ activity.description }}
+            </a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
