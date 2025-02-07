@@ -1,0 +1,61 @@
+.section {
+  @apply flex flex-col;
+
+  &-title {
+    @apply text-5xl font-semibold text-white sm:text-7xl;
+  }
+}
+
+.body {
+  @apply flex justify-evenly
+    /* Mobile screen styles */ flex-col mt-4 space-y-4
+    /* Desktop screen styles */ sm:flex-row sm:mt-16 sm:space-x-16;
+
+  &-left {
+    @apply flex flex-col
+      /* Mobile screen styles */ w-full
+      /* Desktop screen styles */ sm:w-1/3;
+
+    &-image-left {
+      @apply rounded-full ring-2 ring-white self-start
+        /* Mobile screen styles */ h-1/2 w-1/2
+        /* Desktop screen styles */ sm:h-3/4 sm:w-3/4;
+    }
+
+    &-image-right {
+      @apply rounded-full ring-2 ring-white self-end
+        /* Mobile screen styles */ h-1/2 w-1/2
+        /* Desktop screen styles */ sm:h-3/4 sm:w-3/4;
+    }
+  }
+
+  &-right {
+    @apply flex flex-col justify-center
+      /* Mobile screen styles */ w-full
+      /* Desktop screen styles */ sm:w-2/3;
+
+    &-title {
+      @apply font-semibold
+        /* Mobile screen styles */ text-4xl
+        /* Desktop screen styles */ sm:text-5xl;
+    }
+
+    &-header {
+      @apply font-semibold ml-2 mt-2
+        /* Mobile screen styles */ text-xl
+        /* Desktop screen styles */ sm:text-2xl;
+    }
+
+    &-body {
+      @apply ml-2
+        /* Mobile screen styles */ text-sm
+        /* Desktop screen styles */ sm:text-xl;
+    }
+
+    &-link {
+      @apply hover:underline
+        /* Mobile screen styles */ text-sm
+        /* Desktop screen styles */ sm:text-xl;
+    }
+  }
+}

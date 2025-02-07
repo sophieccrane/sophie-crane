@@ -4,6 +4,7 @@ import { HomePageContainerComponent } from './containers/home-page-container.com
 import {HomeRoutingModule} from "./home-routing.module";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SpotifyComponent } from './components/spotify/spotify.component';
+import { EducationComponent } from './components/education/education.component';
 
 
 
@@ -11,7 +12,8 @@ import { SpotifyComponent } from './components/spotify/spotify.component';
   declarations: [
     HomePageContainerComponent,
     NavBarComponent,
-    SpotifyComponent
+    SpotifyComponent,
+    EducationComponent
   ],
     imports: [
         CommonModule, HomeRoutingModule, NgOptimizedImage

@@ -15,7 +15,7 @@
 }
 
 .page {
-  @apply relative isolate px-6 pt-14 lg:px-8 h-screen;
+  @apply relative isolate px-6 pt-14 lg:px-8 min-h-screen;
 
   &-section{
     @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex;
