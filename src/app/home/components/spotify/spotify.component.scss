@@ -1,5 +1,5 @@
 .profile {
-  @apply my-8 mx-4 flex items-start;
+  @apply flex m-4 items-start ring-2 ring-white rounded-md p-2;
 
   &-left {
     @apply mr-4;
@@ -10,15 +10,35 @@
   }
 
   &-title {
-    @apply text-5xl text-left font-bold transition ease-in-out hover:-translate-y-1;
+    @apply text-left font-bold transition ease-in-out hover:-translate-y-1
+      /* Mobile screen styles */ text-3xl
+      /* Desktop screen styles */ sm:text-5xl;
   }
 
-  &-metadata-link {
-    @apply text-sm font-semibold hover:underline;
-  }
+  &-metadata{
+    &-section {
+      @apply flex
+        /* Mobile screen styles */ flex-col
+        /* Desktop screen styles */ sm:flex-row;
+    }
 
-  &-metadata-nolink {
-    @apply text-sm text-gray-50;
+    &-link {
+      @apply font-semibold hover:underline
+        /* Mobile screen styles */ text-xs
+        /* Desktop screen styles */ sm:text-sm;
+    }
+
+    &-nolink {
+      @apply text-gray-50
+        /* Mobile screen styles */ text-xs
+        /* Desktop screen styles */ sm:text-sm;
+    }
+
+    &-separator {
+      @apply px-1
+        /* Mobile screen styles */ hidden
+        /* Desktop screen styles */ sm:block;
+    }
   }
 }
 
@@ -37,11 +57,13 @@
   }
 
   &-number {
-    @apply text-sm font-semibold self-center pl-1;
+    @apply self-center pl-1
+      /* Mobile screen styles */ text-xs
+      /* Desktop screen styles */ sm:text-sm sm:font-semibold;
   }
 
   &-image {
-    @apply ml-2;
+    @apply ml-2 h-[1/16] w-[1/16]
   }
 
   &-title {
@@ -51,7 +73,9 @@
       @apply self-start;
 
       &-text {
-        @apply text-lg font-semibold hover:underline;
+        @apply font-semibold hover:underline
+          /* Mobile screen styles */ text-xs truncate max-w-10
+          /* Desktop screen styles */ sm:text-lg sm:overflow-auto max-w-fit;
       }
     }
 
@@ -68,7 +92,9 @@
     @apply self-center;
 
     &-text {
-      @apply text-xs hover:underline;
+      @apply text-xs hover:underline
+        /* Mobile screen styles */ truncate max-w-20
+        /* Desktop screen styles */ sm:overflow-auto sm:max-w-fit;
     }
   }
 

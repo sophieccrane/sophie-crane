@@ -1,0 +1,39 @@
+.section {
+  @apply flex flex-col max-h-screen;
+
+  &-link {
+    @apply text-sm sm:text-lg hover:underline;
+  }
+}
+
+.body {
+  @apply flex flex-col justify-evenly mt-4
+    /* Mobile screen styles */ space-y-2
+    /* Desktop screen styles */ sm:space-y-8;
+
+  &-title {
+    @apply font-semibold
+      /* Mobile screen styles */ text-2xl
+      /* Desktop screen styles */ sm:text-5xl;
+  }
+
+  &-header {
+    @apply font-semibold
+      /* Mobile screen styles */ text-lg
+      /* Desktop screen styles */ sm:text-2xl sm:ml-2 sm:mt-2;
+  }
+
+  &-body {
+    @apply
+      /* Mobile screen styles */ text-sm
+      /* Desktop screen styles */ sm:text-xl sm:ml-2;
+  }
+
+  &-link {
+    @apply text-white hover:text-gray-200;
+  }
+
+  &-section {
+    @apply ring-2 ring-white rounded-lg p-4;
+  }
+}

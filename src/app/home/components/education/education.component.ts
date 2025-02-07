@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as data from '@shared/variables/education-page.json';
+import * as data from '@shared/variables/page-variables.json';
 
 @Component({
   selector: 'app-education',

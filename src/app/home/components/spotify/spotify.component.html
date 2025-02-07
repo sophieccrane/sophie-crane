@@ -9,17 +9,17 @@
       <a href="{{ userProfileDetails.external_urls.spotify }}">
         <h1 class="profile-title">{{ userProfileDetails.display_name }}</h1>
       </a>
-      <div class="flex items-center">
+      <div class="profile-metadata-section">
         <a href="{{ userProfileDetails.external_urls.spotify }}">
           <p class="profile-metadata-link">@{{ userProfileDetails.id }}</p>
         </a>
-        <span class="mx-0.5"> • </span>
-        <p class="profile-metadata-nolink">{{ userProfileDetails.followers.total }} Followers</p>
+        <p class="profile-metadata-separator"> | </p>
+        <p class="profile-metadata-nolink">{{ userProfileDetails.followers.total }} {{ pageData.followers }}</p>
       </div>
     </div>
   </div>
   <div class="music-section">
-    <h1 class="music-section-title">Current Favorite Tracks</h1>
+    <h1 class="music-section-title">{{ pageData.trackTitle }}</h1>
     <div class="track">
       <div *ngFor="let track of trackDetails; index as i">
         <a href="{{ track.external_urls.spotify }}" class="track-section">
@@ -45,7 +45,7 @@
         </a>
       </div>
     </div>
-    <h1 class="music-section-title">Favorite Artists</h1>
+    <h1 class="music-section-title">{{ pageData.artistTitle }}</h1>
     <div class="card-carousel">
       <div *ngFor="let artist of artistDetails" class="card-section">
         <a href="{{ artist.external_urls.spotify }}">
@@ -57,7 +57,7 @@
         </a>
       </div>
     </div>
-    <h1 class="music-section-title">Featured Playlists</h1>
+    <h1 class="music-section-title">{{ pageData.playlistTitle }}</h1>
     <div class="card-carousel">
       <div *ngFor="let playlist of playlistDetails" class="card-section">
         <a href="{{ playlist.external_urls.spotify }}">

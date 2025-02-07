@@ -15,10 +15,14 @@
 }
 
 .page {
-  @apply relative isolate px-6 pt-14 lg:px-8 min-h-screen;
+  @apply px-6 pt-14 lg:px-8 min-h-screen;
 
   &-section{
     @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex;
+  }
+
+  &-container {
+    @apply flex flex-col;
   }
 }
 
@@ -30,6 +34,8 @@
   }
 
   &-about {
-    @apply text-lg indent-1 mt-4 font-medium text-white sm:text-xl/8;
+    @apply text-white
+      /* Mobile screen styles */ text-xs ml-2
+      /* Desktop screen styles */ sm:text-xl/8 sm:mt-4 sm:indent-1;
   }
 }
