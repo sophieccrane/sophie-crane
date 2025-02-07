@@ -1,5 +1,5 @@
 .section {
-  @apply flex flex-col;
+  @apply flex flex-col max-h-screen;
 
   &-title {
     @apply text-5xl font-semibold text-white sm:text-7xl;
@@ -9,7 +9,7 @@
 .body {
   @apply flex justify-evenly
     /* Mobile screen styles */ flex-col mt-4 space-y-4
-    /* Desktop screen styles */ sm:flex-row sm:mt-16 sm:space-x-16;
+    /* Desktop screen styles */ sm:flex-row sm:mt-8 sm:space-x-16;
 
   &-left {
     @apply flex flex-col
@@ -18,13 +18,13 @@
 
     &-image-left {
       @apply rounded-full ring-2 ring-white self-start
-        /* Mobile screen styles */ h-1/2 w-1/2
+        /* Mobile screen styles */ h-1/2 w-1/2 max-h-[400px] max-w-[400px]
         /* Desktop screen styles */ sm:h-3/4 sm:w-3/4;
     }
 
     &-image-right {
       @apply rounded-full ring-2 ring-white self-end
-        /* Mobile screen styles */ h-1/2 w-1/2
+        /* Mobile screen styles */ h-1/2 w-1/2 max-h-[400px] max-w-[400px]
         /* Desktop screen styles */ sm:h-3/4 sm:w-3/4;
     }
   }
