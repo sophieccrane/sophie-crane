@@ -55,8 +55,9 @@
     "pageTitle": "Spotify",
     "profileTitle": "Profile",
     "followers": "Followers",
-    "trackTitle": "Current Favorite Tracks",
-    "artistTitle": "Favorite Artists",
+    "trackTitle": "Top Tracks from 2024",
+    "genreTitle": "Top Genres from 2024",
+    "artistTitle": "Top Artists from 2024",
     "playlistTitle": "Personal Playlists"
   },
   "runningPage": {

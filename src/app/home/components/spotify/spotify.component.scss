@@ -47,10 +47,15 @@
   &-title {
     @apply text-3xl font-bold pl-2 pt-2;
   }
+
+  &-carousel {
+    @apply flex flex-row overflow-x-scroll;
+  }
 }
 
+
 .track {
-  @apply p-4;
+  @apply p-4 w-full;
 
   &-section {
     @apply flex justify-between ring-2 ring-white rounded-md hover:ring-4 p-2 mb-2;
@@ -63,7 +68,7 @@
   }
 
   &-image {
-    @apply ml-2 h-[1/16] w-[1/16]
+    @apply ml-2 h-[1/16] w-[1/16] object-scale-down;
   }
 
   &-title {
@@ -74,8 +79,8 @@
 
       &-text {
         @apply font-semibold hover:underline
-          /* Mobile screen styles */ text-xs truncate max-w-10
-          /* Desktop screen styles */ sm:text-lg sm:overflow-auto max-w-fit;
+          /* Mobile screen styles */ text-xs text-wrap max-w-20
+          /* Desktop screen styles */ sm:text-lg sm:overflow-auto sm:max-w-fit;
       }
     }
 
@@ -92,8 +97,8 @@
     @apply self-center;
 
     &-text {
-      @apply text-xs hover:underline
-        /* Mobile screen styles */ truncate max-w-20
+      @apply text-xs hover:underline text-right
+        /* Mobile screen styles */ text-wrap max-w-20
         /* Desktop screen styles */ sm:overflow-auto sm:max-w-fit;
     }
   }
