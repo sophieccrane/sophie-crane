@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import * as data from '@shared/variables/page-variables.json'
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,6 +8,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class NavBarComponent {
   @Output() clickEvent = new EventEmitter<string>();
+  pageData: any = (data as any).default;
 
   closed: boolean = true;
 

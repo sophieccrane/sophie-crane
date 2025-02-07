@@ -6,7 +6,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SpotifyComponent } from './components/spotify/spotify.component';
 import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
-
+import {RunningComponent} from "./components/running/running.component";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
     NavBarComponent,
     SpotifyComponent,
     EducationComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    RunningComponent
   ],
     imports: [
         CommonModule, HomeRoutingModule, NgOptimizedImage

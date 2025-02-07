@@ -1,26 +1,28 @@
-<div class="page-container">
-  <app-nav-bar (clickEvent)="receiveFragment($event)"></app-nav-bar>
-    <section class="page" id="Home">
-      <div class="page-section">
-        <div>
-          <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full">
-        </div>
-        <div class="section">
-          <h1 class="section-title">{{ pageData.homePage.name }}</h1>
-          <p class="section-about">{{ pageData.homePage.tagline }}</p>
-        </div>
-      </div>
-    </section>
-    <section class="page" id="Education">
-        <h1 class="section-title">{{ pageData.educationPage.pageTitle }}</h1>
-        <app-education></app-education>
-    </section>
-    <section class="page" id="Experience">
-        <h1 class="section-title">{{ pageData.experiencePage.pageTitle }}</h1>
-        <app-experience></app-experience>
-    </section>
-    <section class="page" id="Spotify">
-        <h1 class="section-title">{{ pageData.spotifyPage.pageTitle }}</h1>
-        <app-spotify></app-spotify>
-    </section>
-</div>
+<app-nav-bar (clickEvent)="receiveFragment($event)"></app-nav-bar>
+<section class="page" id="{{ pageData.homePage.pageTitle }}">
+  <div class="page-section">
+    <div>
+      <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full">
+    </div>
+    <div class="section">
+      <h1 class="section-title">{{ pageData.homePage.name }}</h1>
+      <p class="section-about">{{ pageData.homePage.tagline }}</p>
+    </div>
+  </div>
+</section>
+<section class="page" id="{{ pageData.educationPage.pageTitle }}">
+    <h1 class="section-title">{{ pageData.educationPage.pageTitle }}</h1>
+    <app-education></app-education>
+</section>
+<section class="page" id="{{ pageData.experiencePage.pageTitle }}">
+    <h1 class="section-title">{{ pageData.experiencePage.pageTitle }}</h1>
+    <app-experience></app-experience>
+</section>
+<section class="page" id="{{ pageData.runningPage.pageTitle }}">
+  <h1 class="section-title">{{ pageData.runningPage.pageTitle }}</h1>
+  <app-running></app-running>
+</section>
+<section class="page" id="{{ pageData.spotifyPage.pageTitle }}">
+    <h1 class="section-title">{{ pageData.spotifyPage.pageTitle }}</h1>
+    <app-spotify></app-spotify>
+</section>

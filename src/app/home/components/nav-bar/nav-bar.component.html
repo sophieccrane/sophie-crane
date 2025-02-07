@@ -1,12 +1,13 @@
 <header class="nav-bar">
   <nav class="nav-bar-menu" aria-label="Global">
     <div class="nav-bar-home-button">
-      <button routerLink="/" fragment="Home" class="nav-bar-button" (click)="sendFragment('Home')">Home</button>
+      <button routerLink="/" fragment="{{ pageData.homePage.pageTitle }}" class="nav-bar-button" (click)="sendFragment('Home' )">{{ pageData.homePage.pageTitle }}</button>
     </div>
     <div class="nav-bar-button-row">
-      <button routerLink="/" fragment="Education" class="nav-bar-button" (click)="sendFragment('Education')">Education</button>
-      <button routerLink="/" fragment="Experience" class="nav-bar-button" (click)="sendFragment('Experience')">Experience</button>
-      <button routerLink="/" fragment="Spotify" class="nav-bar-button" (click)="sendFragment('Spotify')">Spotify</button>
+      <button routerLink="/" fragment="{{ pageData.educationPage.pageTitle }}" class="nav-bar-button" (click)="sendFragment('Education')">{{ pageData.educationPage.pageTitle }}</button>
+      <button routerLink="/" fragment="{{ pageData.experiencePage.pageTitle }}" class="nav-bar-button" (click)="sendFragment('Professional Experience')">{{ pageData.experiencePage.pageTitle }}</button>
+      <button routerLink="/" fragment="{{ pageData.runningPage.pageTitle }}" class="nav-bar-button" (click)="sendFragment('Running')">{{ pageData.runningPage.pageTitle }}</button>
+      <button routerLink="/" fragment="{{ pageData.spotifyPage.pageTitle }}" class="nav-bar-button" (click)="sendFragment('Spotify')">{{ pageData.spotifyPage.pageTitle }}</button>
     </div>
   </nav>
   <div class="nav-bar-dropdown">
@@ -20,13 +21,16 @@
     <div *ngIf="!this.closed" class="nav-bar-dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
       <div class="py-1" role="none">
         <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
-        <a routerLink="/" fragment="Education" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-0" (click)="sendFragment('Education')">Education</a>
+        <a routerLink="/" fragment="{{ pageData.educationPage.pageTitle }}" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-0" (click)="sendFragment('Education')">{{ pageData.educationPage.pageTitle }}</a>
       </div>
       <div class="py-1" role="none">
-        <a routerLink="/" fragment="Experience" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-1" (click)="sendFragment('Experience')">Experience</a>
+        <a routerLink="/" fragment="{{ pageData.experiencePage.pageTitle }}" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-1" (click)="sendFragment('Professional Experience')">{{ pageData.experiencePage.pageTitle }}</a>
       </div>
       <div class="py-1" role="none">
-        <a routerLink="/" fragment="Spotify" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-3" (click)="sendFragment('Spotify')">Spotify</a>
+        <a routerLink="/" fragment="{{ pageData.runningPage.pageTitle }}" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-2" (click)="sendFragment('Running')">{{ pageData.runningPage.pageTitle }}</a>
+      </div>
+      <div class="py-1" role="none">
+        <a routerLink="/" fragment="{{ pageData.spotifyPage.pageTitle }}" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-3" (click)="sendFragment('Spotify')">{{ pageData.spotifyPage.pageTitle }}</a>
       </div>
     </div>
   </div>

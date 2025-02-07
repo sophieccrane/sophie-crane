@@ -1,5 +1,6 @@
 {
   "homePage": {
+    "pageTitle": "Home",
     "name": "Sophie Crane",
     "tagline": "Code, sprint, repeat - both on the track and in tech."
   },
@@ -60,6 +61,6 @@
     "playlistTitle": "Personal Playlists"
   },
   "runningPage": {
-    "title": "Running"
+    "pageTitle": "Running"
   }
 }

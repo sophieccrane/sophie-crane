@@ -20,10 +20,6 @@
   &-section{
     @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex;
   }
-
-  &-container {
-    @apply flex flex-col;
-  }
 }
 
 .section {
