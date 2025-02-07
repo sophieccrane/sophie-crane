@@ -1,0 +1,36 @@
+<div class="section">
+  <div class="flex space-x-1 mt-2">
+    <a href="{{ pageData.linkedIn.href }}" class="section-link">{{ pageData.linkedIn.title }}</a>
+    <p> | </p>
+    <a href="{{ pageData.gitHub.href }}" class="section-link">{{ pageData.gitHub.title }}</a>
+  </div>
+    <div class="body">
+        <div class="body-section">
+          <h1 class="body-title">
+            {{ pageData.moodys.jobTitle }}
+            <a href="{{ pageData.moodys.href }}" class="body-link">
+              {{ pageData.moodys.companyTitle }}
+            </a>
+          </h1>
+          <h2 class="body-header">{{ pageData.moodys.duration }}</h2>
+          <p class="body-body">{{ pageData.moodys.description }}</p>
+        </div>
+        <div class="body-section">
+          <h1 class="body-title">
+            {{ pageData.slalom.jobTitle }}
+            <a href="{{ pageData.slalom.href }}" class="body-link">
+              {{ pageData.slalom.companyTitle }}
+            </a>
+          </h1>
+          <h2 class="body-header">{{ pageData.slalom.duration }}</h2>
+          <p class="body-body">{{ pageData.slalom.description }}</p>
+        </div>
+      <div class="body-section">
+        <h1 class="body-title">{{ pageData.certifications.title }}</h1>
+        <h2 class="body-header">
+          <a class="body-link" href="{{ pageData.certifications.href }}">{{ pageData.certifications.certTitle }}</a>
+        </h2>
+        <p class="body-body">{{ pageData.certifications.duration }}</p>
+      </div>
+</div>
+</div>

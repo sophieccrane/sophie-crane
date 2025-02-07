@@ -1,6 +1,7 @@
 import {Component, HostListener, Inject, PLATFORM_ID} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {DOCUMENT, isPlatformBrowser} from "@angular/common";
+import * as data from "@shared/variables/page-variables.json";
 
 @Component({
   selector: 'app-home-page-container',
@@ -9,6 +10,7 @@ import {DOCUMENT, isPlatformBrowser} from "@angular/common";
 })
 export class HomePageContainerComponent {
   receivedFragment: string | undefined;
+  pageData: any = (data as any).default;
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,

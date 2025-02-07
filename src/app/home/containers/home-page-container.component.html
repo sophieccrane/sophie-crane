@@ -1,38 +1,26 @@
 <div class="page-container">
   <app-nav-bar (clickEvent)="receiveFragment($event)"></app-nav-bar>
-  <section class="page" id="Home">
-    <div class="page-section">
-      <div>
-        <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full">
+    <section class="page" id="Home">
+      <div class="page-section">
+        <div>
+          <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full">
+        </div>
+        <div class="section">
+          <h1 class="section-title">{{ pageData.homePage.name }}</h1>
+          <p class="section-about">{{ pageData.homePage.tagline }}</p>
+        </div>
       </div>
-      <div class="section">
-        <h1 class="section-title">Sophie Crane</h1>
-        <p class="section-about">Software developer, runner, and hobby enthusiast.</p>
-      </div>
-    </div>
-  </section>
-  <section class="page" id="Education">
-    <div class="section">
-      <app-education></app-education>
-    </div>
-  </section>
-
-  <section class="page" id="Experience">
-    <div class="section">
-      <h1 class="section-title">Experience</h1>
-      <p class="section-about">Current Position: Associate Software Engineer</p>
-    </div>
-  </section>
-  <section class="page" id="Interests">
-    <div class="section">
-      <h1 class="section-title">Interests</h1>
-      <p class="section-about">Running, crocheting, reading.</p>
-    </div>
-  </section>
-  <section class="page" id="Spotify">
-    <div class="section">
-      <h1 class="section-title">Spotify</h1>
-      <app-spotify></app-spotify>
-    </div>
-  </section>
+    </section>
+    <section class="page" id="Education">
+        <h1 class="section-title">{{ pageData.educationPage.pageTitle }}</h1>
+        <app-education></app-education>
+    </section>
+    <section class="page" id="Experience">
+        <h1 class="section-title">{{ pageData.experiencePage.pageTitle }}</h1>
+        <app-experience></app-experience>
+    </section>
+    <section class="page" id="Spotify">
+        <h1 class="section-title">{{ pageData.spotifyPage.pageTitle }}</h1>
+        <app-spotify></app-spotify>
+    </section>
 </div>

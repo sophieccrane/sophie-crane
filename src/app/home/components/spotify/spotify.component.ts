@@ -3,6 +3,7 @@ import {SpotifyService} from "../../services/spotify.service";
 import {AccessToken, Artist, Artists, Playlist, Track, Tracks, UserProfile} from "../../types/spotify-payload.model";
 import {forkJoin, map, Subject, switchMap, takeUntil, tap} from "rxjs";
 import {PLAYLIST_IDS} from "../../../shared/constants";
+import * as data from '@shared/variables/page-variables.json'
 
 @Component({
   selector: 'app-spotify',
@@ -10,6 +11,7 @@ import {PLAYLIST_IDS} from "../../../shared/constants";
   styleUrls: ['./spotify.component.scss']
 })
 export class SpotifyComponent {
+  pageData: any = (data as any).default.spotifyPage;
   userProfile;
   userProfileDetails!: UserProfile;
   playlists;

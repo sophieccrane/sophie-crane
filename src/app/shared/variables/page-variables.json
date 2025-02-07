@@ -1,0 +1,65 @@
+{
+  "homePage": {
+    "name": "Sophie Crane",
+    "tagline": "Code, sprint, repeat - both on the track and in tech."
+  },
+  "educationPage": {
+    "pageTitle": "Education",
+    "collegeTitle": "University of South Carolina",
+    "collegeDuration": "From September 2019 to May 2023",
+    "collegeDescription": "Bachelor of Science in Computer Science with a Minor in Mathematics",
+    "collegeActivitiesTitle": "Extracurriculars",
+    "extracurriculars": [{
+      "href": "https://sc.edu/about/offices_and_divisions/student_success_center/study-smart/tutoring/index.php",
+      "description": "University of South Carolina Peer Tutoring (Calculus I, Calculus II, Introductory CS Classes)"
+    },{
+      "href": "https://www.pibetaphi.org/",
+      "description": "Pi Beta Phi Sorority"
+    },{
+      "href": "https://www.tbp.org/home.cfm",
+      "description": "Tau Beta Pi (Engineering Honors Society"
+    }]
+  },
+  "experiencePage": {
+    "pageTitle": "Professional Experience",
+    "moodys": {
+      "jobTitle": "Associate Software Engineer,",
+      "companyTitle": "Moody's Ratings",
+      "href": "https://www.moodys.com/",
+      "duration": "From August 2023 to Present",
+      "description": "Primarily using Java (SpringBoot), PostgreSQL, and GraphQL for the backend and Angular with Typescript for the frontend. We operate using Agile/SCRUM methodologies."
+    },
+    "slalom": {
+      "jobTitle": "Software Engineering Intern,",
+      "companyTitle": "Slalom Build",
+      "href": "https://www.slalombuild.com/",
+      "duration": "From June 2022 to August 2022",
+      "description": "Re-platformed the organization's contacts application by integrating features to the organization's central application. Used Java (Node.js) for the backend and Angular with Typescript for the frontend. Used Agile/SCRUM methodologies."
+    },
+    "linkedIn": {
+      "href": "https://www.linkedin.com/in/sophiecarolinecrane",
+      "title": "Linkedin"
+    },
+    "gitHub": {
+      "href": "https://github.com/sophieccrane",
+      "title": "GitHub"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "certTitle": "AWS Cloud Practitioner",
+      "duration": "Issued August 2022, Expires August 2025",
+      "href": "https://www.credly.com/badges/60a94a08-9d9b-4c8a-8669-16a73232ef48/public_url?trk=public_profile_see-credential"
+    }
+  },
+  "spotifyPage": {
+    "pageTitle": "Spotify",
+    "profileTitle": "Profile",
+    "followers": "Followers",
+    "trackTitle": "Current Favorite Tracks",
+    "artistTitle": "Favorite Artists",
+    "playlistTitle": "Personal Playlists"
+  },
+  "runningPage": {
+    "title": "Running"
+  }
+}
