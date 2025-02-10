@@ -1,5 +1,5 @@
 .section {
-  @apply flex flex-col max-h-screen;
+  @apply flex flex-col min-h-screen;
 
   &-link {
     @apply text-sm sm:text-lg hover:underline;
