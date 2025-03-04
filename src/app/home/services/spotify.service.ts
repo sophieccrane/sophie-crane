@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from "../../../environments/environment";
 import {ARTIST_IDS, PLAYLIST_FIELDS_PARAM, TRACK_IDS} from "../../shared/constants";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
-import {AccessToken, Playlist, UserProfile, Artist, Artists, Tracks} from "../types/spotify-payload.model";
-import {tap} from "rxjs";
+import {AccessToken, Playlist, UserProfile, Artists, Tracks} from "../types/spotify-payload.model";
 
 @Injectable({
   providedIn: 'root'
@@ -47,7 +46,7 @@ export class SpotifyService {
 
   // Change this to utilize get user's playlist endpoint
   getPlaylist(accessToken: string, playlistId: string) {
-    let fields = 'fields=' + PLAYLIST_FIELDS_PARAM;
+    const fields = 'fields=' + PLAYLIST_FIELDS_PARAM;
     return this._http.get<Playlist>(
       `${this._baseUrl}/playlists/${playlistId}`,
       {
@@ -65,7 +64,7 @@ export class SpotifyService {
   }
 
   getArtists(accessToken: string) {
-    let artistIds = 'ids=' + ARTIST_IDS.join(",");
+    const artistIds = 'ids=' + ARTIST_IDS.join(",");
     return this._http.get<Artists>(
       `${this._baseUrl}/artists`,
       {
@@ -82,7 +81,7 @@ export class SpotifyService {
   }
 
   getTracks(accessToken: string) {
-    let trackIds = 'ids=' + TRACK_IDS.join(",");
+    const trackIds = 'ids=' + TRACK_IDS.join(",");
     return this._http.get<Tracks>(
       `${this._baseUrl}/tracks`,
       {

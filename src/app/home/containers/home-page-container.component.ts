@@ -1,4 +1,4 @@
-import {Component, HostListener, Inject, PLATFORM_ID} from '@angular/core';
+import {Component, HostListener, Inject, PLATFORM_ID, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {DOCUMENT, isPlatformBrowser} from "@angular/common";
 import * as data from "@shared/variables/page-variables.json";
@@ -8,13 +8,13 @@ import * as data from "@shared/variables/page-variables.json";
   templateUrl: './home-page-container.component.html',
   styleUrls: ['./home-page-container.component.scss']
 })
-export class HomePageContainerComponent {
+export class HomePageContainerComponent implements OnInit {
   receivedFragment: string | undefined;
   pageData: any = (data as any).default;
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
-              @Inject(PLATFORM_ID) private platformId: Object,
+              @Inject(PLATFORM_ID) private platformId: object,
               @Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit() {

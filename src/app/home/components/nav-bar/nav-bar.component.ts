@@ -8,7 +8,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class NavBarComponent {
   @Output() clickEvent = new EventEmitter<string>();
 
-  closed: boolean = true;
+  closed = true;
 
   sendFragment(fragment: string) {
     this.clickEvent.emit(fragment);
