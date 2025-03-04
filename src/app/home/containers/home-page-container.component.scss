@@ -1,5 +1,5 @@
 .nav-bar {
-  @apply absolute inset-x-0 top-0 z-50;
+  @apply sticky inset-x-0 top-0 z-50;
 
   &-menu {
     @apply flex items-end justify-end p-6 lg:px-8;
