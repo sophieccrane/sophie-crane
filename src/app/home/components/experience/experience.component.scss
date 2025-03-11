@@ -1,12 +1,12 @@
 .section {
-  @apply flex flex-col min-h-screen;
+  @apply flex flex-col min-h-screen space-y-8;
 
   &-link {
     @apply text-sm sm:text-lg hover:underline;
   }
 }
 
-.body {
+.experience {
   @apply flex flex-col justify-evenly mt-4
     /* Mobile screen styles */ space-y-2
     /* Desktop screen styles */ sm:space-y-8;
@@ -20,7 +20,7 @@
   &-header {
     @apply font-semibold
       /* Mobile screen styles */ text-lg
-      /* Desktop screen styles */ sm:text-2xl sm:ml-2 sm:mt-2;
+      /* Desktop screen styles */ sm:text-2xl sm:ml-2 sm:mt-1;
   }
 
   &-body {
@@ -35,5 +35,25 @@
 
   &-section {
     @apply ring-2 ring-white rounded-lg p-4;
+  }
+}
+
+.skills {
+  @apply mt-6;
+
+  &-title {
+    @apply font-bold text-3xl;
+  }
+
+  &-item {
+    @apply flex space-x-1 ml-4;
+
+    &-title {
+      @apply font-bold text-xl;
+    }
+
+    &-list {
+      @apply text-xl;
+    }
   }
 }
