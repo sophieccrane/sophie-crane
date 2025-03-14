@@ -42,18 +42,24 @@
   @apply mt-6;
 
   &-title {
-    @apply font-bold text-3xl;
+    @apply font-semibold
+      /* Mobile screen styles */ text-2xl
+      /* Desktop screen styles */ sm:text-5xl;
   }
 
   &-item {
     @apply flex space-x-1 ml-4;
 
     &-title {
-      @apply font-bold text-xl;
+      @apply font-semibold
+        /* Mobile screen styles */ text-lg
+        /* Desktop screen styles */ sm:text-xl;
     }
 
     &-list {
-      @apply text-xl;
+      @apply
+        /* Mobile screen styles */ text-sm
+        /* Desktop screen styles */ sm:text-lg;
     }
   }
 }
