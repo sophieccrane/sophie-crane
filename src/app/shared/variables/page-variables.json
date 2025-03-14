@@ -17,24 +17,24 @@
       "description": "Pi Beta Phi Sorority"
     },{
       "href": "https://www.tbp.org/home.cfm",
-      "description": "Tau Beta Pi (Engineering Honors Society"
+      "description": "Tau Beta Pi (Engineering Honors Society)"
     }]
   },
   "experiencePage": {
-    "pageTitle": "Professional Experience",
+    "pageTitle": "Professional Experience & Projects",
     "moodys": {
       "jobTitle": "Associate Software Engineer,",
       "companyTitle": "Moody's Ratings",
       "href": "https://www.moodys.com/",
       "duration": "From August 2023 to Present",
-      "description": "Primarily using Java (SpringBoot), PostgreSQL, and GraphQL for the backend and Angular with Typescript for the frontend. We operate using Agile/SCRUM methodologies."
+      "description": "Developing and maintaining full-stack applications that are widely used throughout Moody's Ratings, leveraging Java (Spring Boot) and PostreSQL for scalable backend solutions, along with GraphQL for efficient data fetching. On the frontend, building dynamic and responsive user interfaces using Angular and TypeScript. Collaborating on teams within an Agile/SCRUM environment to deliver high-quality, maintainable software, while actively participating in code reviews, architectural discussions, and continuous improvement initiatives. "
     },
     "slalom": {
       "jobTitle": "Software Engineering Intern,",
       "companyTitle": "Slalom Build",
       "href": "https://www.slalombuild.com/",
       "duration": "From June 2022 to August 2022",
-      "description": "Re-platformed the organization's contacts application by integrating features to the organization's central application. Used Java (Node.js) for the backend and Angular with Typescript for the frontend. Used Agile/SCRUM methodologies."
+      "description": "Contributed to the re-platforming of Slalom Build's internal contacts application by integrating key features into the organization's central platform. Developed back-end services using Node.js and built interactive frontend components with Angular and TypeScript. Worked in an Agile/SCRUM environment to deliver scalable, high-quality solutions while gaining hands-on experience in full-stack development."
     },
     "linkedIn": {
       "href": "https://www.linkedin.com/in/sophiecarolinecrane",
@@ -48,7 +48,23 @@
       "title": "Certifications",
       "certTitle": "AWS Cloud Practitioner",
       "duration": "Issued August 2022, Expires August 2025",
-      "href": "https://www.credly.com/badges/60a94a08-9d9b-4c8a-8669-16a73232ef48/public_url?trk=public_profile_see-credential"
+      "href": "https://www.credly.com/badges/60a94a08-9d9b-4c8a-8669-16a73232ef48/public_url?trk=public_profile_see-credential",
+      "description": "Earned the AWS Cloud Practitioner certification by demonstrating strong foundational knowledge of AWS services, cloud concepts, security, and best practices. Earned during time at internship at Slalom Build."
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "skillsList": [{"title": "Languages:", "skills": "Java, TypeScript, JavaScript, SQL, GraphQL"}, {"title": "Frameworks:", "skills": "Spring Boot, Angular, React, Node.JS"}, {"title": "Technologies:", "skills": "PostgreSQL, AWS S3"}],
+      "softSkillsTitle": "Soft Skills"
+    },
+    "projects": {
+      "title": "Projects",
+      "dkmsProjectTitle": "Senior Capstone Project: ",
+      "dkmsDuration": "Began in August 2022 and completed in April 2023",
+      "dkmsTitle": "DKMS",
+      "dkmsHeader": "Built from August 2022 to May 2023",
+      "dkmsDescription": "Developed DKMS, a web application designed to enhance the core Spotify experience by integrating analytics, song playback, personalized music recommendations, and social networking features. Built using React with TypeScript and Next.js for a dynamic and responsive frontend, while leveraging Firebase for backend services. Deployed and hosted on Vercel.",
+      "dkmsLinkTitle": "Link",
+      "dkmsLink": "https://dkms.vercel.app/"
     }
   },
   "spotifyPage": {

@@ -4,33 +4,55 @@
     <p> | </p>
     <a href="{{ pageData.gitHub.href }}" class="section-link">{{ pageData.gitHub.title }}</a>
   </div>
-    <div class="body">
-        <div class="body-section">
-          <h1 class="body-title">
+  <div class="experience">
+        <div class="experience-section">
+          <h1 class="experience-title">
             {{ pageData.moodys.jobTitle }}
-            <a href="{{ pageData.moodys.href }}" class="body-link">
+            <a href="{{ pageData.moodys.href }}" class="experience-link">
               {{ pageData.moodys.companyTitle }}
             </a>
           </h1>
-          <h2 class="body-header">{{ pageData.moodys.duration }}</h2>
-          <p class="body-body">{{ pageData.moodys.description }}</p>
+          <h2 class="experience-header">{{ pageData.moodys.duration }}</h2>
+          <p class="experience-body">{{ pageData.moodys.description }}</p>
         </div>
-        <div class="body-section">
-          <h1 class="body-title">
+        <div class="experience-section">
+          <h1 class="experience-title">
             {{ pageData.slalom.jobTitle }}
-            <a href="{{ pageData.slalom.href }}" class="body-link">
+            <a href="{{ pageData.slalom.href }}" class="experience-link">
               {{ pageData.slalom.companyTitle }}
             </a>
           </h1>
-          <h2 class="body-header">{{ pageData.slalom.duration }}</h2>
-          <p class="body-body">{{ pageData.slalom.description }}</p>
+          <h2 class="experience-header">{{ pageData.slalom.duration }}</h2>
+          <p class="experience-body">{{ pageData.slalom.description }}</p>
         </div>
-      <div class="body-section">
-        <h1 class="body-title">{{ pageData.certifications.title }}</h1>
-        <h2 class="body-header">
-          <a class="body-link" href="{{ pageData.certifications.href }}">{{ pageData.certifications.certTitle }}</a>
-        </h2>
-        <p class="body-body">{{ pageData.certifications.duration }}</p>
+    <h1 class="experience-title">{{ pageData.certifications.title }}</h1>
+      <div class="experience-section">
+        <h1 class="experience-title">
+          <a class="experience-link" href="{{ pageData.certifications.href }}">{{ pageData.certifications.certTitle }}</a>
+        </h1>
+        <h2 class="experience-header">{{ pageData.certifications.duration }}</h2>
+        <p class="experience-body">{{ pageData.certifications.description }}</p>
       </div>
-</div>
+  </div>
+  <div class="experience">
+    <div class="experience-title">{{ pageData.projects.title }}</div>
+    <div class="experience-section">
+      <h1 class="experience-title">
+        {{ pageData.projects.dkmsProjectTitle }}
+        <a class="experience-link" href="{{ pageData.projects.dkmsLink }}">
+          {{ pageData.projects.dkmsTitle }}
+        </a>
+      </h1>
+      <h2 class="experience-header">{{ pageData.projects.dkmsDuration }}</h2>
+      <p class="experience-body">{{ pageData.projects.dkmsDescription }}</p>
+      <p class="experience-body">{{ pageData.projects.dkmsTechnologies }} </p>
+    </div>
+  </div>
+  <div class="skills">
+    <div class="skills-title">{{ pageData.skills.title }}</div>
+    <div *ngFor="let skill of pageData.skills.skillsList" class="skills-item">
+      <div class="skills-item-title">{{ skill.title }}</div>
+      <div class="skills-item-list">{{  skill.skills }}</div>
+    </div>
+  </div>
 </div>
