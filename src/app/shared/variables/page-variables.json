@@ -23,18 +23,43 @@
   "experiencePage": {
     "pageTitle": "Professional Experience & Projects",
     "moodys": {
+      "jobTitle": "Software Engineer,",
+      "companyTitle": "Moody's Ratings",
+      "href": "https://www.moodys.com/",
+      "duration": "From November 2025 to Present",
+      "description": "I work on a small team building and maintaining internal applications that support Moody's ratings data and workflows. Stepping into senior-level responsibilities despite being early in my career, I help drive API architecture and technical decision-making, design solutions that scale as requirements grow, and build end-to-end features spanning backend services and front-end interfaces. I also regularly partner across teams to integrate data from systems outside our own, translating business requirements into maintainable technical solutions.",
+      "bullets": [
+        "Help lead API architecture and system design decisions for internal applications supporting Moody's ratings process",
+        "Build full-stack, end-to-end features — from backend services to the user interface",
+        "Collaborate cross-functionally with other engineering teams and Product stakeholders to integrate external data sources"
+      ],
+      "tech": "Angular, Spring Boot, NestJS, TypeScript, Java, PostgreSQL, AWS, Kubernetes, Docker, REST APIs, Microservices"
+    },
+    "moodysAssociate": {
       "jobTitle": "Associate Software Engineer,",
       "companyTitle": "Moody's Ratings",
       "href": "https://www.moodys.com/",
-      "duration": "From August 2023 to Present",
-      "description": "Developing and maintaining full-stack applications that are widely used throughout Moody's Ratings, leveraging Java (Spring Boot) and PostreSQL for scalable backend solutions, along with GraphQL for efficient data fetching. On the frontend, building dynamic and responsive user interfaces using Angular and TypeScript. Collaborating on teams within an Agile/SCRUM environment to deliver high-quality, maintainable software, while actively participating in code reviews, architectural discussions, and continuous improvement initiatives. "
+      "duration": "From August 2023 to November 2025",
+      "description": "Across two teams, I contributed to the modernization of internal tools supporting Moody's ratings workflows, moving processes off of outdated, manual, and spreadsheet-dependent systems and into centralized web applications. My work spanned automating business-rule-driven calculations, building shared backend utilities used across multiple applications, and leading an architectural refactor that made an existing system more flexible and extensible, improving maintainability across 2,300+ documents. I also extended internal APIs to give other applications more flexible access to shared data. Alongside my project work, I spent two summers helping run the team's internship program — interviewing candidates, onboarding new interns, and organizing a cross-functional session series to broaden their exposure across the organization.",
+      "bullets": [
+        "Automated manual, rule-based calculations as part of modernizing legacy workflows into centralized applications",
+        "Built a shared backend utility adopted across multiple internal applications",
+        "Led an architectural refactor that made an existing application more extensible and scalable, improving maintainability across 2,300+ documents",
+        "Extended internal APIs to support more flexible, consumer-driven data access",
+        "Interviewed candidates and onboarded interns for two consecutive summer internship cohorts"
+      ],
+      "tech": "Java, Spring Boot, Angular, TypeScript, GraphQL, PostgreSQL, MongoDB, AWS, Kubernetes, Docker, Kafka, Jenkins"
     },
     "slalom": {
       "jobTitle": "Software Engineering Intern,",
       "companyTitle": "Slalom Build",
       "href": "https://www.slalombuild.com/",
       "duration": "From June 2022 to August 2022",
-      "description": "Contributed to the re-platforming of Slalom Build's internal contacts application by integrating key features into the organization's central platform. Developed back-end services using Node.js and built interactive frontend components with Angular and TypeScript. Worked in an Agile/SCRUM environment to deliver scalable, high-quality solutions while gaining hands-on experience in full-stack development."
+      "description": "On an all-intern team, I helped re-platform an internal contacts mobile app into a centralized web application. I contributed to the search functionality and built the UX for the results experience, including a detailed contact page, giving employees one reliable place to find and connect with each other.",
+      "bullets": [
+        "Helped re-platform a mobile contacts app into a web application, building the MVP search feature and results UI"
+      ],
+      "tech": "Node.js, JavaScript, React, TypeScript, AWS"
     },
     "linkedIn": {
       "href": "https://www.linkedin.com/in/sophiecarolinecrane",
@@ -53,18 +78,26 @@
     },
     "skills": {
       "title": "Technical Skills",
-      "skillsList": [{"title": "Languages:", "skills": "Java, TypeScript, JavaScript, SQL, GraphQL"}, {"title": "Frameworks:", "skills": "Spring Boot, Angular, React, Node.JS"}, {"title": "Technologies:", "skills": "PostgreSQL, AWS S3"}],
+      "skillsList": [
+        {"title": "Languages:", "skills": "Java, TypeScript, JavaScript, Python, SQL"},
+        {"title": "Frameworks & Libraries:", "skills": "Spring Boot, Angular, NestJS, React, Node.js, GraphQL"},
+        {"title": "Cloud & Infrastructure:", "skills": "AWS, Kubernetes, Docker, S3"},
+        {"title": "Databases:", "skills": "PostgreSQL, MongoDB"},
+        {"title": "Tools:", "skills": "Git, GitHub Actions, Jenkins, IntelliJ IDEA, WebStorm, DBeaver, Kafka"},
+        {"title": "Practices:", "skills": "Agile, Scrum, Microservices, REST API Design, System Architecture"},
+        {"title": "AI Tools:", "skills": "Claude API, GitHub MCP Server"},
+        {"title": "Other:", "skills": "Technical Interviewing, Mentoring & Onboarding, Cross-Functional Collaboration"}
+      ],
       "softSkillsTitle": "Soft Skills"
     },
     "projects": {
       "title": "Projects",
-      "dkmsProjectTitle": "Senior Capstone Project: ",
-      "dkmsDuration": "Began in August 2022 and completed in April 2023",
-      "dkmsTitle": "DKMS",
-      "dkmsHeader": "Built from August 2022 to May 2023",
-      "dkmsDescription": "Developed DKMS, a web application designed to enhance the core Spotify experience by integrating analytics, song playback, personalized music recommendations, and social networking features. Built using React with TypeScript and Next.js for a dynamic and responsive frontend, while leveraging Firebase for backend services. Deployed and hosted on Vercel.",
-      "dkmsLinkTitle": "Link",
-      "dkmsLink": "https://dkms.vercel.app/"
+      "codeReviewerProjectTitle": "Personal Project: ",
+      "codeReviewerTitle": "Code Reviewer Tool",
+      "codeReviewerLink": "https://github.com/sophieccrane/code-reviewer-tool",
+      "codeReviewerLinkTitle": "GitHub Repository",
+      "codeReviewerDescription": "I built an AI-powered code review tool that analyzes pull request diffs against markdown files defining team best practices and architecture standards. It was my first deep dive into Python and into working with AI programmatically — teaching me the tradeoffs between calling an API directly versus using an MCP server, and how much good context matters for getting useful output from a model.",
+      "codeReviewerTech": "Python, Claude API, GitHub MCP Server"
     }
   },
   "spotifyPage": {
