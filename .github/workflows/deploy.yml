@@ -32,6 +32,7 @@ jobs:
 
       - name: Write production environment file
         run: |
+          mkdir -p src/environments
           cat > src/environments/environment.prod.ts << EOF
           export const environment = {
             production: true,
