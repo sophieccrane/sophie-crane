@@ -1,12 +1,12 @@
-<header class="nav-bar">
+<header class="nav-bar" [class.nav-bar--scrolled]="isScrolled">
   <nav class="nav-bar-menu" aria-label="Global">
     <div class="nav-bar-home-button">
-      <button routerLink="/" fragment="Home" class="nav-bar-button" (click)="sendFragment('Home')">Home</button>
+      <button routerLink="/" fragment="Home" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Home'" (click)="sendFragment('Home')">Home</button>
     </div>
     <div class="nav-bar-button-row">
-      <button routerLink="/" fragment="Education" class="nav-bar-button" (click)="sendFragment('Education')">Education</button>
-      <button routerLink="/" fragment="Experience" class="nav-bar-button" (click)="sendFragment('Experience')">Experience</button>
-      <button routerLink="/" fragment="Spotify" class="nav-bar-button" (click)="sendFragment('Spotify')">Spotify</button>
+      <button routerLink="/" fragment="Education" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Education'" (click)="sendFragment('Education')">Education</button>
+      <button routerLink="/" fragment="Experience" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Experience'" (click)="sendFragment('Experience')">Experience</button>
+      <button routerLink="/" fragment="Spotify" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Spotify'" (click)="sendFragment('Spotify')">Spotify</button>
     </div>
   </nav>
   <div class="nav-bar-dropdown">

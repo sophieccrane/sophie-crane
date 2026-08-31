@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, Inject, Input, Output, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,8 +8,19 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class NavBarComponent {
   @Output() clickEvent = new EventEmitter<string>();
+  @Input() activeSection: string | undefined;
 
   closed = true;
+  isScrolled = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
+  @HostListener('window:scroll')
+  onScroll() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isScrolled = window.scrollY > 8;
+    }
+  }
 
   sendFragment(fragment: string) {
     this.clickEvent.emit(fragment);
