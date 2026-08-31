@@ -14,8 +14,26 @@
           </h1>
           <h2 class="experience-header">{{ pageData.moodys.duration }}</h2>
           <p class="experience-body">{{ pageData.moodys.description }}</p>
+          <ul class="experience-bullets">
+            <li *ngFor="let bullet of pageData.moodys.bullets">{{ bullet }}</li>
+          </ul>
+          <p class="experience-body"><strong>Tech:</strong> {{ pageData.moodys.tech }}</p>
         </div>
         <div class="experience-section card-surface" appScrollReveal [appScrollRevealDelay]="80">
+          <h1 class="experience-title">
+            {{ pageData.moodysAssociate.jobTitle }}
+            <a href="{{ pageData.moodysAssociate.href }}" class="experience-link">
+              {{ pageData.moodysAssociate.companyTitle }}
+            </a>
+          </h1>
+          <h2 class="experience-header">{{ pageData.moodysAssociate.duration }}</h2>
+          <p class="experience-body">{{ pageData.moodysAssociate.description }}</p>
+          <ul class="experience-bullets">
+            <li *ngFor="let bullet of pageData.moodysAssociate.bullets">{{ bullet }}</li>
+          </ul>
+          <p class="experience-body"><strong>Tech:</strong> {{ pageData.moodysAssociate.tech }}</p>
+        </div>
+        <div class="experience-section card-surface" appScrollReveal [appScrollRevealDelay]="160">
           <h1 class="experience-title">
             {{ pageData.slalom.jobTitle }}
             <a href="{{ pageData.slalom.href }}" class="experience-link">
@@ -24,6 +42,10 @@
           </h1>
           <h2 class="experience-header">{{ pageData.slalom.duration }}</h2>
           <p class="experience-body">{{ pageData.slalom.description }}</p>
+          <ul class="experience-bullets">
+            <li *ngFor="let bullet of pageData.slalom.bullets">{{ bullet }}</li>
+          </ul>
+          <p class="experience-body"><strong>Tech:</strong> {{ pageData.slalom.tech }}</p>
         </div>
     <h1 class="experience-title">{{ pageData.certifications.title }}</h1>
       <div class="experience-section card-surface" appScrollReveal>
@@ -38,14 +60,14 @@
     <div class="experience-title">{{ pageData.projects.title }}</div>
     <div class="experience-section card-surface" appScrollReveal>
       <h1 class="experience-title">
-        {{ pageData.projects.dkmsProjectTitle }}
-        <a class="experience-link" href="{{ pageData.projects.dkmsLink }}">
-          {{ pageData.projects.dkmsTitle }}
-        </a>
+        {{ pageData.projects.codeReviewerProjectTitle }}
+        {{ pageData.projects.codeReviewerTitle }}
       </h1>
-      <h2 class="experience-header">{{ pageData.projects.dkmsDuration }}</h2>
-      <p class="experience-body">{{ pageData.projects.dkmsDescription }}</p>
-      <p class="experience-body">{{ pageData.projects.dkmsTechnologies }} </p>
+      <p class="experience-body">{{ pageData.projects.codeReviewerDescription }}</p>
+      <p class="experience-body"><strong>Tech:</strong> {{ pageData.projects.codeReviewerTech }}</p>
+      <a class="experience-link" href="{{ pageData.projects.codeReviewerLink }}">
+        {{ pageData.projects.codeReviewerLinkTitle }}
+      </a>
     </div>
   </div>
   <div class="skills">

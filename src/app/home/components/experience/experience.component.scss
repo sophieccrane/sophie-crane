@@ -36,6 +36,12 @@
   &-section {
     @apply p-4 sm:p-6;
   }
+
+  &-bullets {
+    @apply list-disc list-outside text-text-secondary space-y-1 mt-2
+      /* Mobile screen styles */ text-sm ml-5
+      /* Desktop screen styles */ sm:text-lg sm:ml-8;
+  }
 }
 
 .skills {
