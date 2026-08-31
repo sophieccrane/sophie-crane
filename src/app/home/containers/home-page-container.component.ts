@@ -10,6 +10,7 @@ import * as data from "@shared/variables/page-variables.json";
 })
 export class HomePageContainerComponent implements OnInit {
   receivedFragment: string | undefined;
+  currentActiveSection: string | undefined;
   pageData: any = (data as any).default;
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -23,6 +24,7 @@ export class HomePageContainerComponent implements OnInit {
 
   receiveFragment($event: string) {
     this.receivedFragment = $event;
+    this.currentActiveSection = $event;
     this.jumpToSection(this.receivedFragment);
   }
 
@@ -44,7 +46,9 @@ export class HomePageContainerComponent implements OnInit {
         }
       });
 
-      if (currentSectionId) {
+      if (currentSectionId && currentSectionId !== this.receivedFragment) {
+        this.receivedFragment = currentSectionId;
+        this.currentActiveSection = currentSectionId;
         this.router.navigate([], { fragment : currentSectionId });
       }
     }

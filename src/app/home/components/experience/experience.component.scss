@@ -2,39 +2,39 @@
   @apply flex flex-col min-h-screen space-y-8;
 
   &-link {
-    @apply text-sm sm:text-lg hover:underline;
+    @apply text-sm sm:text-lg text-accent hover:underline;
   }
 }
 
 .experience {
   @apply flex flex-col justify-evenly mt-4
-    /* Mobile screen styles */ space-y-2
+    /* Mobile screen styles */ space-y-4
     /* Desktop screen styles */ sm:space-y-8;
 
   &-title {
-    @apply font-semibold
+    @apply font-heading font-semibold text-text-primary
       /* Mobile screen styles */ text-2xl
       /* Desktop screen styles */ sm:text-5xl;
   }
 
   &-header {
-    @apply font-semibold
+    @apply font-semibold text-text-secondary
       /* Mobile screen styles */ text-lg
       /* Desktop screen styles */ sm:text-2xl sm:ml-2 sm:mt-1;
   }
 
   &-body {
-    @apply
+    @apply text-text-secondary
       /* Mobile screen styles */ text-sm
       /* Desktop screen styles */ sm:text-xl sm:ml-2;
   }
 
   &-link {
-    @apply text-white hover:text-gray-200;
+    @apply text-accent hover:text-accent/70;
   }
 
   &-section {
-    @apply ring-2 ring-white rounded-lg p-4;
+    @apply p-4 sm:p-6;
   }
 }
 
@@ -42,24 +42,28 @@
   @apply mt-6;
 
   &-title {
-    @apply font-semibold
+    @apply font-heading font-semibold text-text-primary
       /* Mobile screen styles */ text-2xl
       /* Desktop screen styles */ sm:text-5xl;
   }
 
   &-item {
-    @apply flex space-x-1 ml-4;
+    @apply flex flex-col space-y-2 ml-4 mt-4;
 
     &-title {
-      @apply font-semibold
+      @apply font-semibold text-text-primary
         /* Mobile screen styles */ text-lg
         /* Desktop screen styles */ sm:text-xl;
     }
+  }
 
-    &-list {
-      @apply
-        /* Mobile screen styles */ text-sm
-        /* Desktop screen styles */ sm:text-lg;
-    }
+  &-pills {
+    @apply flex flex-wrap gap-2;
+  }
+
+  &-pill {
+    @apply bg-surface ring-1 ring-black/5 rounded-full px-3 py-1 text-text-secondary transition duration-200 hover:ring-accent/40 hover:text-text-primary
+      /* Mobile screen styles */ text-xs
+      /* Desktop screen styles */ sm:text-sm;
   }
 }
