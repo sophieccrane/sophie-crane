@@ -1,0 +1,45 @@
+.races-list {
+  @apply flex flex-col space-y-8 p-4;
+}
+
+.race-card {
+  @apply flex flex-col overflow-hidden
+    /* Desktop screen styles */ sm:flex-row;
+}
+
+.race-map {
+  @apply h-64 w-full
+    /* Desktop screen styles */ sm:h-auto sm:w-1/2 sm:min-h-[280px];
+}
+
+.race-details {
+  @apply flex flex-col p-6
+    /* Desktop screen styles */ sm:w-1/2;
+}
+
+.race-title {
+  @apply font-heading text-2xl font-bold text-text-primary;
+}
+
+.race-date {
+  @apply text-sm text-text-secondary mb-4;
+}
+
+.race-stats {
+  @apply grid grid-cols-2 gap-4 mb-4
+    /* Desktop screen styles */ sm:grid-cols-4;
+}
+
+.race-stat {
+  &-label {
+    @apply text-xs uppercase tracking-wide text-text-secondary;
+  }
+
+  &-value {
+    @apply text-lg font-semibold text-accent;
+  }
+}
+
+.race-blurb {
+  @apply text-sm text-text-secondary;
+}

@@ -6,7 +6,7 @@
     <div class="nav-bar-button-row">
       <button routerLink="/" fragment="Education" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Education'" (click)="sendFragment('Education')">Education</button>
       <button routerLink="/" fragment="Experience" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Experience'" (click)="sendFragment('Experience')">Experience</button>
-      <button routerLink="/" fragment="Spotify" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Spotify'" (click)="sendFragment('Spotify')">Spotify</button>
+      <button routerLink="/" fragment="Races" class="nav-bar-button" [class.nav-bar-button--active]="activeSection === 'Races'" (click)="sendFragment('Races')">Races</button>
     </div>
   </nav>
   <div class="nav-bar-dropdown">
@@ -26,7 +26,7 @@
         <a routerLink="/" fragment="Experience" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-1" (click)="sendFragment('Experience')">Experience</a>
       </div>
       <div class="py-1" role="none">
-        <a routerLink="/" fragment="Spotify" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-3" (click)="sendFragment('Spotify')">Spotify</a>
+        <a routerLink="/" fragment="Races" class="nav-bar-dropdown-menu-button" role="menuitem" tabindex="-1" id="menu-item-2" (click)="sendFragment('Races')">Races</a>
       </div>
     </div>
   </div>
