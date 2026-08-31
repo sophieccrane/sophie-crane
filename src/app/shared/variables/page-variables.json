@@ -100,16 +100,21 @@
       "codeReviewerTech": "Python, Claude API, GitHub MCP Server"
     }
   },
-  "spotifyPage": {
-    "pageTitle": "Spotify",
-    "profileTitle": "Profile",
-    "followers": "Followers",
-    "trackTitle": "Top Tracks from 2024",
-    "genreTitle": "Top Genres from 2024",
-    "artistTitle": "Top Artists from 2024",
-    "playlistTitle": "Personal Playlists"
-  },
   "runningPage": {
     "title": "Running"
+  },
+  "racesPage": {
+    "title": "Races",
+    "distanceLabel": "Distance",
+    "elevationLabel": "Elevation",
+    "timeLabel": "Moving Time",
+    "paceLabel": "Pace",
+    "blurbs": {
+      "charlotte-half-marathon-2025": "Second annual Charlotte Half Marathon and first year guiding someone with their first half!",
+      "charlotte-half-2024": "First time doing the Charlotte Half! Hills are pretty rough in Charlotte, who would've thought...",
+      "kiawah-marathon-2024": "First full marathon! Flat and peaceful with plenty of nature surrounding me. Perfect weather and great to have so many people come and cheer.",
+      "wilmington-half-marathon-2025": "Fun \"away\" half marathon. Beautiful sunrise beachfront views in the beginning. My dad's first half!",
+      "racefest-half-marathon-2024": "Very first Half Marathon! Trained quick and raced quick."
+    }
   }
 }

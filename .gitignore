@@ -20,6 +20,10 @@ experience/
 *.env
 !.env.example
 
+# Raw GPX exports (large, personal GPS/HR data - only the generated
+# src/app/shared/variables/races.json output is checked in)
+scripts/gpx-source/
+
 # IDEs and editors
 .idea/
 .project

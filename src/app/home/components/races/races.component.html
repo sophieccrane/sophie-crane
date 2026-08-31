@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="races-list">
+    <div *ngFor="let race of races" class="race-card card-surface" appScrollReveal>
+      <div #mapContainer class="race-map"></div>
+      <div class="race-details">
+        <h1 class="race-title">{{ race.name }}</h1>
+        <p class="race-date">{{ formatDate(race.date) }}</p>
+        <div class="race-stats">
+          <div class="race-stat">
+            <p class="race-stat-label">{{ pageData.distanceLabel }}</p>
+            <p class="race-stat-value">{{ formatDistance(race.distanceMeters) }}</p>
+          </div>
+          <div class="race-stat">
+            <p class="race-stat-label">{{ pageData.elevationLabel }}</p>
+            <p class="race-stat-value">{{ formatElevation(race.elevationGainMeters) }}</p>
+          </div>
+          <div class="race-stat">
+            <p class="race-stat-label">{{ pageData.timeLabel }}</p>
+            <p class="race-stat-value">{{ formatDuration(race.movingTimeSeconds) }}</p>
+          </div>
+          <div class="race-stat">
+            <p class="race-stat-label">{{ pageData.paceLabel }}</p>
+            <p class="race-stat-value">{{ formatPace(race) }}</p>
+          </div>
+        </div>
+        <p class="race-blurb">{{ blurbFor(race) }}</p>
+      </div>
+    </div>
+  </div>
+</div>

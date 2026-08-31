@@ -30,22 +30,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Write production environment file
-        run: |
-          mkdir -p src/environments
-          cat > src/environments/environment.prod.ts << EOF
-          export const environment = {
-            production: true,
-            spotify_client_id: '${{ secrets.SPOTIFY_CLIENT_ID }}',
-            spotify_client_secret: '${{ secrets.SPOTIFY_CLIENT_SECRET }}'
-          };
-          EOF
-          cat > src/environments/environment.ts << EOF
-          export const environment = {
-            production: true
-          };
-          EOF
-
       - name: Build
         run: npx ng build --configuration production --base-href /sophie-crane/
 
