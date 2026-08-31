@@ -12,6 +12,14 @@ npm-debug.log
 yarn-error.log
 experience/node_modules
 
+# In-progress backend (tracked on its own branch, not here)
+experience/
+
+# Secrets
+.env
+*.env
+!.env.example
+
 # IDEs and editors
 .idea/
 .project
