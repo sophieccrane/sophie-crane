@@ -1,5 +1,9 @@
 .nav-bar {
-  @apply sticky inset-x-0 top-0 z-50;
+  @apply sticky inset-x-0 top-0 z-50 transition-colors duration-300 ease-out;
+
+  &--scrolled {
+    @apply bg-base/80 backdrop-blur-md shadow-sm;
+  }
 
   &-menu {
     @apply flex max-md:hidden p-6 lg:px-8 pt-4 justify-between;
@@ -14,25 +18,42 @@
   }
 
   &-button {
-    @apply text-sm/6 font-semibold text-white hover:text-[#FF9889];
+    @apply relative text-sm/6 font-semibold text-text-secondary transition-colors duration-200 hover:text-accent pb-1;
+
+    &::after {
+      content: '';
+      @apply absolute left-0 -bottom-0.5 h-px w-0 bg-accent transition-all duration-200 ease-out;
+    }
+
+    &:hover::after {
+      @apply w-full;
+    }
+
+    &--active {
+      @apply text-text-primary;
+
+      &::after {
+        @apply w-full;
+      }
+    }
   }
 
   &-dropdown {
     @apply flex md:hidden justify-end p-4;
 
     &-button {
-      @apply inline-flex justify-end px-3 py-2 text-sm/6 font-semibold text-white;
+      @apply inline-flex justify-end px-3 py-2 text-sm/6 font-semibold text-text-primary;
 
       &-svg {
-        @apply size-6 stroke-white;
+        @apply size-6 stroke-text-primary;
       }
     }
 
     &-menu {
-      @apply absolute right-0 z-10 mt-10 mr-4 w-32 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 bg-[#FFC4D8] focus:outline-none divide-y divide-gray-100;
+      @apply absolute right-0 z-10 mt-10 mr-4 w-32 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 bg-surface/95 backdrop-blur-md focus:outline-none divide-y divide-black/5;
 
       &-button {
-        @apply block px-4 py-2 text-sm/6 font-semibold text-white;
+        @apply block px-4 py-2 text-sm/6 font-semibold text-text-primary hover:text-accent;
       }
     }
   }

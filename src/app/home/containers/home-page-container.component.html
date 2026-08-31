@@ -1,26 +1,31 @@
 <div class="page-container">
-  <app-nav-bar (clickEvent)="receiveFragment($event)" class="nav-bar"></app-nav-bar>
+  <app-nav-bar (clickEvent)="receiveFragment($event)" [activeSection]="currentActiveSection" class="nav-bar"></app-nav-bar>
     <section class="page" id="Home">
       <div class="page-section">
         <div>
-          <img src="assets/profile_picture.JPG" width="300" height="300" class="rounded-full" alt="profile_picture">
+          <img ngSrc="assets/profile_picture.webp" width="300" height="300" priority class="hero-image" alt="profile_picture">
         </div>
         <div class="section">
           <h1 class="section-title">{{ pageData.homePage.name }}</h1>
           <p class="section-about">{{ pageData.homePage.tagline }}</p>
         </div>
       </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="scroll-cue-chevron">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
     </section>
     <section class="page" id="Education">
-        <h1 class="section-title">{{ pageData.educationPage.pageTitle }}</h1>
+        <h1 class="section-title" appScrollReveal>{{ pageData.educationPage.pageTitle }}</h1>
         <app-education></app-education>
     </section>
     <section class="page" id="Experience">
-        <h1 class="section-title">{{ pageData.experiencePage.pageTitle }}</h1>
+        <h1 class="section-title" appScrollReveal>{{ pageData.experiencePage.pageTitle }}</h1>
         <app-experience></app-experience>
     </section>
     <section class="page" id="Spotify">
-        <h1 class="section-title">{{ pageData.spotifyPage.pageTitle }}</h1>
+        <h1 class="section-title" appScrollReveal>{{ pageData.spotifyPage.pageTitle }}</h1>
         <app-spotify></app-spotify>
     </section>
 </div>

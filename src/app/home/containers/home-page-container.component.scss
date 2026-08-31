@@ -1,24 +1,12 @@
 .nav-bar {
   @apply sticky inset-x-0 top-0 z-50;
-
-  &-menu {
-    @apply flex items-end justify-end p-6 lg:px-8;
-  }
-
-  &-button-row {
-    @apply hidden lg:flex lg:gap-x-12;
-  }
-
-  &-button {
-    @apply text-sm/6 font-semibold text-white hover:text-[#FF9889];
-  }
 }
 
 .page {
-  @apply px-6 pt-14 lg:px-8 min-h-screen;
+  @apply px-6 pt-24 lg:px-8 min-h-screen relative overflow-hidden;
 
   &-section{
-    @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex;
+    @apply mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex relative z-10;
   }
 
   &-container {
@@ -26,16 +14,46 @@
   }
 }
 
+#Home {
+  &::before {
+    content: '';
+    @apply absolute -top-1/4 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] rounded-full pointer-events-none;
+    background: radial-gradient(circle, rgb(var(--color-accent) / 0.14) 0%, rgb(var(--color-accent) / 0) 70%);
+  }
+}
+
+.hero-image {
+  @apply ring-1 ring-accent/30 shadow-[0_0_40px_-8px_rgb(var(--color-accent)/0.35)] rounded-full;
+}
+
+.scroll-cue {
+  @apply absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-text-secondary z-10;
+
+  &-chevron {
+    @apply w-5 h-5 animate-bounce;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-chevron {
+    animation: none;
+  }
+}
+
 .section {
   @apply flex flex-col text-left ml-4 self-center;
 
   &-title {
-    @apply text-5xl font-semibold text-white sm:text-7xl;
+    @apply font-heading text-5xl font-semibold text-text-primary sm:text-7xl tracking-tight;
   }
 
   &-about {
-    @apply text-white
-      /* Mobile screen styles */ text-xs ml-2
+    @apply text-text-secondary
+      /* Mobile screen styles */ text-sm ml-2
       /* Desktop screen styles */ sm:text-xl/8 sm:mt-4 sm:indent-1;
   }
+}
+
+#Home .section-title {
+  @apply text-6xl sm:text-8xl;
 }

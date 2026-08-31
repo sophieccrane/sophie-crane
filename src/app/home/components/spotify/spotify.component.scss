@@ -1,5 +1,5 @@
 .profile {
-  @apply flex m-4 items-start ring-2 ring-white rounded-md p-2;
+  @apply flex m-4 items-start p-4;
 
   &-left {
     @apply mr-4;
@@ -10,7 +10,7 @@
   }
 
   &-title {
-    @apply text-left font-bold transition ease-in-out hover:-translate-y-1
+    @apply text-left font-heading font-bold text-text-primary transition ease-in-out hover:-translate-y-1
       /* Mobile screen styles */ text-3xl
       /* Desktop screen styles */ sm:text-5xl;
   }
@@ -23,19 +23,19 @@
     }
 
     &-link {
-      @apply font-semibold hover:underline
+      @apply font-semibold text-accent hover:underline
         /* Mobile screen styles */ text-xs
         /* Desktop screen styles */ sm:text-sm;
     }
 
     &-nolink {
-      @apply text-gray-50
+      @apply text-text-secondary
         /* Mobile screen styles */ text-xs
         /* Desktop screen styles */ sm:text-sm;
     }
 
     &-separator {
-      @apply px-1
+      @apply px-1 text-text-secondary
         /* Mobile screen styles */ hidden
         /* Desktop screen styles */ sm:block;
     }
@@ -45,7 +45,7 @@
 .music-section {
 
   &-title {
-    @apply text-3xl font-bold pl-2 pt-2;
+    @apply font-heading text-3xl font-bold text-text-primary pl-2 pt-2;
   }
 
   &-carousel {
@@ -58,7 +58,7 @@
   @apply p-4 w-full;
 
   &-section {
-    @apply flex justify-between ring-2 ring-white rounded-md hover:ring-4 p-2 mb-2;
+    @apply flex justify-between p-2 mb-2;
   }
 
   &-number {
@@ -106,7 +106,7 @@
 }
 
 .card {
-  @apply flex flex-col snap-center items-start justify-center h-[222px] w-[200px] p-4 ring-2 ring-white hover:ring-8 rounded-lg transition delay-75 duration-300 ease-in-out hover:-translate-y-1;
+  @apply flex flex-col snap-center items-start justify-center h-[222px] w-[200px] p-4 transition delay-75 duration-300 ease-in-out hover:-translate-y-1;
 
   &-carousel {
     @apply flex flex-row space-x-4 relative overflow-x-scroll snap-x;
@@ -116,11 +116,11 @@
     @apply p-4;
 
     &-title {
-      @apply text-base text-left font-semibold max-w-[150px] truncate hover:underline hover:overflow-visible hover:text-wrap;
+      @apply text-base text-left font-semibold text-text-primary max-w-[150px] truncate hover:underline hover:overflow-visible hover:text-wrap;
     }
 
     &-header {
-      @apply text-xs text-left capitalize;
+      @apply text-xs text-left text-text-secondary capitalize;
     }
   }
 }

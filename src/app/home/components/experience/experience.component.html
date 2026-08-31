@@ -5,7 +5,7 @@
     <a href="{{ pageData.gitHub.href }}" class="section-link">{{ pageData.gitHub.title }}</a>
   </div>
   <div class="experience">
-        <div class="experience-section">
+        <div class="experience-section card-surface" appScrollReveal>
           <h1 class="experience-title">
             {{ pageData.moodys.jobTitle }}
             <a href="{{ pageData.moodys.href }}" class="experience-link">
@@ -15,7 +15,7 @@
           <h2 class="experience-header">{{ pageData.moodys.duration }}</h2>
           <p class="experience-body">{{ pageData.moodys.description }}</p>
         </div>
-        <div class="experience-section">
+        <div class="experience-section card-surface" appScrollReveal [appScrollRevealDelay]="80">
           <h1 class="experience-title">
             {{ pageData.slalom.jobTitle }}
             <a href="{{ pageData.slalom.href }}" class="experience-link">
@@ -26,7 +26,7 @@
           <p class="experience-body">{{ pageData.slalom.description }}</p>
         </div>
     <h1 class="experience-title">{{ pageData.certifications.title }}</h1>
-      <div class="experience-section">
+      <div class="experience-section card-surface" appScrollReveal>
         <h1 class="experience-title">
           <a class="experience-link" href="{{ pageData.certifications.href }}">{{ pageData.certifications.certTitle }}</a>
         </h1>
@@ -36,7 +36,7 @@
   </div>
   <div class="experience">
     <div class="experience-title">{{ pageData.projects.title }}</div>
-    <div class="experience-section">
+    <div class="experience-section card-surface" appScrollReveal>
       <h1 class="experience-title">
         {{ pageData.projects.dkmsProjectTitle }}
         <a class="experience-link" href="{{ pageData.projects.dkmsLink }}">
@@ -52,7 +52,9 @@
     <div class="skills-title">{{ pageData.skills.title }}</div>
     <div *ngFor="let skill of pageData.skills.skillsList" class="skills-item">
       <div class="skills-item-title">{{ skill.title }}</div>
-      <div class="skills-item-list">{{  skill.skills }}</div>
+      <div class="skills-pills">
+        <span *ngFor="let s of skill.skillsArray" class="skills-pill">{{ s }}</span>
+      </div>
     </div>
   </div>
 </div>

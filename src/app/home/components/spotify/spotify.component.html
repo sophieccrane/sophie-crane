@@ -1,5 +1,5 @@
 <div class="page">
-  <div class="profile">
+  <div class="profile card-surface" *ngIf="userProfileDetails">
     <div class="profile-left">
       <a href="{{ userProfileDetails.external_urls.spotify }}">
         <img src="{{ userProfileDetails.images[0].url }}" width="150" height="150" alt="spotify-profile-picture" class="profile-image">
@@ -51,9 +51,9 @@
       </div>
     <h1 class="music-section-title">{{ pageData.artistTitle }}</h1>
     <div class="card-carousel">
-      <div *ngFor="let artist of artistDetails; index as i" class="card-section">
+      <div *ngFor="let artist of artistDetails; index as i" class="card-section" appScrollReveal [appScrollRevealDelay]="i * 60">
         <a href="{{ artist.external_urls.spotify }}">
-          <div class="card">
+          <div class="card card-surface">
             <img src="{{ artist.images[0].url }}" width="150" height="150" class="card-section-image" alt="artist-image">
             <h1 class="card-section-title">{{ i + 1 }}. {{ artist.name }}</h1>
             <h1 class="card-section-header">{{ artist.type }}</h1>
@@ -63,9 +63,9 @@
     </div>
     <h1 class="music-section-title">{{ pageData.playlistTitle }}</h1>
     <div class="card-carousel">
-      <div *ngFor="let playlist of playlistDetails" class="card-section">
+      <div *ngFor="let playlist of playlistDetails; index as i" class="card-section" appScrollReveal [appScrollRevealDelay]="i * 60">
         <a href="{{ playlist.external_urls.spotify }}">
-          <div class="card">
+          <div class="card card-surface">
             <img src="{{ playlist.images[0].url }}" width="150" height="150" class="card-section-image" alt="playist-image">
             <h1 class="card-section-title">{{ playlist.name }}</h1>
           </div>
